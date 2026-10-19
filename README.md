@@ -1,5 +1,4 @@
-# gRPC Polyglot Lab
-
+# LANGKAHMEMBUAT PROJECT GRPC
 Komunikasi inter-service dengan gRPC: satu **server Go** dan dua **client** (**Python** dan **Node.js**) yang memakai satu kontrak `user.proto`.
 
 | Komponen | Bahasa | Cara memakai `user.proto` |
@@ -323,18 +322,4 @@ Mengirim request ke Go Server menggunakan Python...
 Respon dari Server -> Nama: Afdhal Fitrah Ramadhan, Email: afdhalfitrahramadhan2@gmail.com, Telepon: 083163859104
 ```
 
-## 7. Menambah Field `phone` (Tugas Evaluasi Mandiri No. 1)
 
-1. Tambahkan `string phone = 3;` pada `UserResponse` di `user.proto`.
-2. Generate ulang kode **Go** (perintah di langkah 3.2) dan **Python** (perintah di langkah 4).
-3. Isi `Phone` pada kedua respons di `go-server/main.go`.
-4. Cetak `response.phone` di `client.py` dan `client.js`.
-5. Jalankan ulang server (`Ctrl+C`, lalu `go run main.go`) dan kedua client. Field berhasil jika baris `Telepon: ...` muncul di kedua client.
-
-
-
-```bash
-git add README.md
-git commit -m "Docs: Add README with static vs dynamic code generation analysis"
-git push
-```
