@@ -1,4 +1,4 @@
-# LANGKAHMEMBUAT PROJECT GRPC
+# LANGKAH MEMBUAT PROJECT GRPC
 Komunikasi inter-service dengan gRPC: satu **server Go** dan dua **client** (**Python** dan **Node.js**) yang memakai satu kontrak `user.proto`.
 
 | Komponen | Bahasa | Cara memakai `user.proto` |
