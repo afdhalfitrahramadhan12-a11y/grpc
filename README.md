@@ -331,23 +331,7 @@ Respon dari Server -> Nama: Afdhal Fitrah Ramadhan, Email: afdhalfitrahramadhan2
 4. Cetak `response.phone` di `client.py` dan `client.js`.
 5. Jalankan ulang server (`Ctrl+C`, lalu `go run main.go`) dan kedua client. Field berhasil jika baris `Telepon: ...` muncul di kedua client.
 
-## 8. Analisis: Static Code Generation vs Dynamic Runtime Generation (Tugas Evaluasi Mandiri No. 2)
 
-Pada pendekatan *static code generation* (Go dan Python), berkas `user.proto` diproses lebih dahulu oleh `protoc` untuk menghasilkan berkas kode sumber, yaitu `user.pb.go` dan `user_grpc.pb.go` pada Go serta `user_pb2.py` dan `user_pb2_grpc.py` pada Python. Berkas hasil generate disimpan di dalam proyek dan diimpor oleh program, sehingga setiap perubahan `user.proto`, misalnya penambahan field `phone`, mengharuskan `protoc` dijalankan ulang. Pada pendekatan *dynamic runtime generation* (Node.js), tidak ada langkah `protoc` dan tidak ada berkas hasil generate di folder `node-client`. Berkas `user.proto` dibaca langsung saat program dijalankan melalui `protoLoader.loadSync`, lalu definisi layanan dibentuk dengan `grpc.loadPackageDefinition`. Kedua alur menghasilkan komunikasi yang sama dengan server Go, tetapi berbeda pada waktu pemrosesan skema: sebelum program berjalan atau ketika program berjalan.
-
-## 9. Commit dan Push ke GitHub
-
-Buat repositori kosong di GitHub, lalu dari folder utama proyek:
-
-```bash
-git add .
-git commit -m "Feat: Add full polyglot implementation of Go server, Python client, and Node client"
-git branch -M main
-git remote add origin https://github.com/USERNAME_ANDA/NAMA_REPO.git
-git push -u origin main
-```
-
-Setelah menambahkan bagian analisis (langkah 8) ke `README.md`, simpan sebagai commit baru dan push:
 
 ```bash
 git add README.md
